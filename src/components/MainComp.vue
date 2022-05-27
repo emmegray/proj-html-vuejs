@@ -1,16 +1,11 @@
 <template>
   <div class="main">
 
-    <div class="jumbotron text-center">
-      <h1 class="display-5 fw-bold">Untold Stories</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4 serif"><em>These is an untold story behind every favorite song.</em></p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" class="btn-f btn-lg px-4 gap-3">Latest Album</button>
-          <button type="button" class="btn-e btn-lg px-4">Live dates</button>
-        </div>
-      </div>
-    </div>
+    <jumbotron-container title="Untold Stories" description="These is an untold story behind every favorite song."
+      addClass="bg-home-slider">
+      <button type="button" class="btn-f btn-lg px-4 gap-3">Latest Album</button>
+      <button type="button" class="btn-e btn-lg px-4">Live dates</button>
+    </jumbotron-container>
 
     <section-container addClass="bg-ebony-clay">
       <section-header title="Music is Life"
@@ -24,16 +19,24 @@
 
     <section-link link="#" label="View all latest news"></section-link>
 
+    <jumbotron-container
+      :description="`&quot; I just listened to it and said to myself, &quot;Man, I really love this
+album.&quot; Still, today, it just sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They're
+      good. And they're inventive. I haven't heard anything this year that's as inventive. I don't really expect to.&quot;`"
+      addClass="bg-home-testimonal">
+      <a href="#"><img src="../../public/img/band_interview_play_icon.png" alt="play icon"></a>
+    </jumbotron-container>
   </div>
 </template>
 
 <script>
+import JumbotronContainer from './JumbotronContainer.vue'
 import SectionContainer from './Sections/SectionContainer.vue'
 import SectionHeader from './Sections/SectionHeader.vue'
 import SectionLink from './Sections/SectionLink.vue'
 
 export default {
-  components: { SectionContainer, SectionHeader, SectionLink },
+  components: { SectionContainer, SectionHeader, SectionLink, JumbotronContainer },
   name: 'MainComp'
 }
 </script>
@@ -41,13 +44,11 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style.scss";
 
-.jumbotron {
+.bg-home-slider {
   background: url('../../public/img/home_slider.jpg') no-repeat center center;
-  background-size: cover;
-  height: 615px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+.bg-home-testimonal {
+  background: url('../../public/img/home-testimonial-parallax.jpg') no-repeat center center;
 }
 </style>
