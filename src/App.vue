@@ -17,14 +17,14 @@ export default {
     MainComp,
     HeaderComp,
     FooterComp
-}
+  }
 }
 </script>
 
 <style lang="scss">
 @import "./assets/style.scss";
+
 #app {
-  background: $charade;
   color: $white;
 }
 </style>

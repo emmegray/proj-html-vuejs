@@ -1,25 +1,34 @@
 <template>
-  <div class="header container-fluid">
-    <img class="logo" src="../assets/img/avada-music-logo.png" alt="logo">
-    <font-awesome-icon icon="fa-solid fa-bars" />
-  </div>
+  <nav class="header">
+    <img class="logo" src="/img/avada-music-logo.png" alt="logo">
+    <font-awesome-icon icon="fa-solid fa-bars" size="xl" />
+  </nav>
 </template>
 
 <script>
 export default {
-  name:'HeaderComp'
+  name: 'HeaderComp'
 }
 </script>
 
 <style lang="scss" scoped>
 .header {
-  box-sizing: content-box;
-  height: 115px;
-  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  justify-content: space-around;
-  padding: 20px 20px;
+  height: 90px;
+  padding: 0px 20px 0px;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-
+img {
+  height: 100%;
+  padding: 20px 0;
+}
 </style>

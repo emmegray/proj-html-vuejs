@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
-
 // Boootstrap
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
@@ -26,3 +20,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faBars, faChevronUp, faPlus, faFacebookF, faTwitter, faInstagram, faYoutube)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.config.productionTip = false
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')

@@ -17,5 +17,56 @@ $bali-hai: #859fb4;
 //Material design
 $jumbo: #737376;
 $blue-zodiac: #0b2037;
-$ebony-clay: #2d2d45;
+$ebony-clay: #323844;
 $sorrell-brown: #c8ba7e;
+
+//Background-color
+.bg-charade {
+    background: $charade;
+}
+
+.bg-mandy {
+    background: $mandy;
+}
+
+.bg-ebony-clay {
+    background: $ebony-clay;
+}
+
+//Button
+.btn-f {
+    background: $mandy;
+    border: 1px solid $mandy;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: small;
+    color: $white;
+
+    &:hover {
+        background-color: $white;
+        color: $charade;
+    }
+}
+
+.btn-e {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: small;
+    color: $white;
+
+    &:hover {
+        background-color: $white;
+        color: $charade;
+    }
+}
+
+//Font
+h1 {
+    font-size: 7rem;
+}
+
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
