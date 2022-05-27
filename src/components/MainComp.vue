@@ -26,6 +26,14 @@ album.&quot; Still, today, it just sounds so fresh. It sounds full of ideas. The
       addClass="bg-home-testimonal">
       <a href="#"><img src="../../public/img/band_interview_play_icon.png" alt="play icon"></a>
     </jumbotron-container>
+
+    <section-container addClass="bg-charade">
+      <section-header title="Live Dates"
+        description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, beatae pariatur quod iste voluptatum provident? Possimus magnam nesciunt perspiciatis quisquam voluptatum fugiat, impedit magni. Dolores sequi accusantium quisquam quibusdam unde!" />
+    </section-container>
+
+    <section-link link="#" label="View all live dates"></section-link>
+
   </div>
 </template>
 

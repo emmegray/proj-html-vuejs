@@ -26,9 +26,4 @@ export default {
   justify-content: space-between;
   z-index: 1000;
 }
-
-img {
-  height: 100%;
-  padding: 20px 0;
-}
 </style>
