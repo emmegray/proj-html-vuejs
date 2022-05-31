@@ -29,6 +29,7 @@ button {
     border: 1px solid $mandy;
     text-transform: uppercase;
     font-size: 0.8rem;
+    transition: 0.5s;
 
     &:hover {
         background: $white;

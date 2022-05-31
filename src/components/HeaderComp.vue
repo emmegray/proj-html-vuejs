@@ -1,5 +1,4 @@
 <template>
-<div>
   <nav class="header">
     <img class="logo" src="/img/avada-music-logo.png" alt="logo" />
     <button @click="show">
@@ -7,7 +6,7 @@
       <font-awesome-icon v-else icon="fa-solid fa-bars" size="xl" />
     </button>
 
-    <div class="menu" v-if="showMenu">
+    <div class="menu" :class="{ show: showMenu }">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Mee The Band</a></li>
@@ -18,9 +17,6 @@
       </ul>
     </div>
   </nav>
-
-  <slot v-if="!showMenu"></slot>
-</div>
 </template>
 
 <script>
@@ -32,15 +28,17 @@ export default {
     };
   },
   methods: {
-    show () {
+    show() {
       this.showMenu = !this.showMenu;
-    }
-  }
+      document.body.style.overflow = this.showMenu ? "hidden" : "visible";
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/style.scss";
+
 .header {
   position: absolute;
   top: 0;
@@ -73,10 +71,17 @@ button {
   width: 100vw;
   position: fixed;
   background-color: $mandy;
-  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  display: flex;
+  opacity: 0;
+  transition: opacity ease-in 0.5s;
+  pointer-events: none;
+  &.show {
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 ul li {
   margin-bottom: 3rem;
@@ -89,5 +94,9 @@ ul li a {
   &:hover {
     opacity: 1;
   }
+}
+
+.fa-xmark {
+  padding-right: 17px;
 }
 </style>

@@ -37,10 +37,11 @@ $sorrell-brown: #c8ba7e;
 .btn-f {
     background: $mandy;
     border: 1px solid $mandy;
-    border-radius: 0;
+    border-radius: 2px;
     text-transform: uppercase;
     font-size: small;
     color: $white;
+    transition: 0.5s;
 
     &:hover {
         background-color: $white;
@@ -51,10 +52,11 @@ $sorrell-brown: #c8ba7e;
 .btn-e {
     background: transparent;
     border: 1px solid white;
-    border-radius: 0;
+    border-radius: 2px;
     text-transform: uppercase;
     font-size: small;
     color: $white;
+    transition: 0.5s;
 
     &:hover {
         background-color: $white;
