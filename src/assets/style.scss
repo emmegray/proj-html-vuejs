@@ -71,8 +71,12 @@ h1 {
     font-family: 'Times New Roman', Times, serif;
 }
 
+ul {
+    list-style: none;
+}
+
 ul,
-li {
+li, a {
     text-decoration: none;
 }
 

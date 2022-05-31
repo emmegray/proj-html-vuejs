@@ -13,11 +13,11 @@ Vue.use(IconsPlugin)
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faChevronUp, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronUp, faMinus, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookF, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faBars, faChevronUp, faPlus, faFacebookF, faTwitter, faInstagram, faYoutube)
+library.add(faBars, faMinus, faChevronUp, faPlus, faFacebookF, faTwitter, faInstagram, faYoutube, faXmark)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
