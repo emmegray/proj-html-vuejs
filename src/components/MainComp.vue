@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <jumbotron-container
+    <jumbotron-container class="home-slider"
       title="Untold Stories"
       description="These is an untold story behind every favorite song."
       addClass="bg-home-slider"
@@ -9,6 +9,7 @@
         Latest Album
       </button>
       <button type="button" class="btn-e btn-lg px-4">Live dates</button>
+      <div class="separator"></div>
     </jumbotron-container>
 
     <section-container addClass="bg-ebony-clay">
@@ -162,8 +163,22 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style.scss";
 
+.home-slider{
+  position: relative;
+}
+
 .bg-home-slider {
   background: url("../../public/img/home_slider.jpg") no-repeat center center;
+}
+
+.separator {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  width: 400px;
+  border-bottom: 10px solid $mandy;
+  position: absolute;
+  bottom: -34px;
 }
 
 .bg-home-testimonal {
